@@ -10,8 +10,11 @@ public class Client
 	 * @param nom le nom du client. 
 	 */
 	
+	private String nom; //////////
+	
 	public Client(String nom)
 	{
+		this.nom = nom;
 	}
 
 	/**
@@ -19,9 +22,9 @@ public class Client
 	 * @return le nom du client.
 	 */
 	
-	public String getNom()
+	public String getNom()   //////////
 	{
-		return null;
+		return nom;
 	}
 	
 	/**
@@ -29,8 +32,9 @@ public class Client
 	 * @param nom le nom du client.
 	 */
 	
-	public void setNom(String nom)
+	public void setNom(String nom)   ////////////
 	{
+		this.nom = nom;
 	}
 	
 	/**
@@ -41,7 +45,7 @@ public class Client
 	
 	public Facture createFacture(int montant)
 	{
-		return null;
+		return new Facture(this, montant);
 	}
 	
 	/**
