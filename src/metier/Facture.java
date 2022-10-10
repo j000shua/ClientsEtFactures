@@ -15,12 +15,15 @@ public class Facture
 	
 	LocalDate date;
 	
-	public Facture(Client client, int montant) {
+	boolean estRegle;
+	
+	public Facture(Client client, int montant, boolean estRegle) { ///////////////
 		this.client = client;
 		this.montant = montant;
+		this.estRegle = estRegle;
 	}
 	
-	public Client getClient()
+	public Client getClient() /////////////////
 	{
 		return client;
 	}
@@ -30,7 +33,7 @@ public class Facture
 	 * @return le montant de la facture.
 	 */
 	
-	public int getMontant()
+	public int getMontant() //////////////
 	{
 		return montant;
 	}
@@ -40,9 +43,9 @@ public class Facture
 	 * @return vrai ssi la facture est reglée.
 	 */
 	
-	public boolean estReglee()
+	public boolean estReglee() ////////////
 	{
-		return true;
+		return estRegle;
 	}
 
 	/**
@@ -70,6 +73,6 @@ public class Facture
 	
 	public Facture copie() ////////////
 	{
-		return new Facture(this.client, this.montant);
+		return new Facture(this.client, this.montant, this.estRegle);
 	}
 }
