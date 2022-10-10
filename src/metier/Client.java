@@ -63,7 +63,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{	
-		return this.facturesReglees;
+		return this.factures;
 	}
 	
 	/**
