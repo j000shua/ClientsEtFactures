@@ -9,18 +9,19 @@ public class Facture
 	 * @return le client.
 	 */
 	
-	Client client;
+	private Client client;
 	
-	int montant;
+	private int montant;
 	
-	LocalDate date;
+	private LocalDate date;
 	
-	boolean estRegle;
+	private boolean estRegle;
 	
-	public Facture(Client client, int montant, boolean estRegle) { ///////////////
+	public Facture(Client client, int montant, boolean estRegle, LocalDate date) { ///////////////
 		this.client = client;
 		this.montant = montant;
 		this.estRegle = estRegle;
+		this.date = date;
 	}
 	
 	public Client getClient() /////////////////
@@ -53,7 +54,7 @@ public class Facture
 	 * @return la date de la facture.
 	 */
 	
-	public LocalDate getDate()
+	public LocalDate getDate() ////////////
 	{
 		return date;
 	}
@@ -73,6 +74,6 @@ public class Facture
 	
 	public Facture copie() ////////////
 	{
-		return new Facture(this.client, this.montant, this.estRegle);
+		return new Facture(this.client, this.montant, this.estRegle, this.date);
 	}
 }

@@ -45,7 +45,7 @@ public class Client
 	
 	public Facture createFacture(int montant) ////////////
 	{
-		return new Facture(this, montant, false);
+		return new Facture(this, montant, false, java.time.LocalDate.now());
 	}
 	
 	/**
@@ -77,7 +77,7 @@ public class Client
 	
 	public Facture createFacture(int montant, boolean reglee) /////////
 	{
-		return new Facture(this, montant, reglee);
+		return new Facture(this, montant, reglee, java.time.LocalDate.now());
 	}	
 	
 	/**
