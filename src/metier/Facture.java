@@ -13,6 +13,8 @@ public class Facture
 	
 	int montant;
 	
+	LocalDate date;
+	
 	public Facture(Client client, int montant) {
 		this.client = client;
 		this.montant = montant;
@@ -50,7 +52,7 @@ public class Facture
 	
 	public LocalDate getDate()
 	{
-		return null;
+		return date;
 	}
 
 	/**
@@ -66,8 +68,8 @@ public class Facture
 	 * @return une copie de la facture.
 	 */
 	
-	public Facture copie()
+	public Facture copie() ////////////
 	{
-		return null;
+		return new Facture(this.client, this.montant);
 	}
 }

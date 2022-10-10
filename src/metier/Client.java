@@ -12,7 +12,7 @@ public class Client
 	
 	private String nom; //////////
 	
-	public Client(String nom)
+	public Client(String nom) //////////
 	{
 		this.nom = nom;
 	}
@@ -43,7 +43,7 @@ public class Client
 	 * @return la facture créée.
 	 */
 	
-	public Facture createFacture(int montant)
+	public Facture createFacture(int montant) ////////////
 	{
 		return new Facture(this, montant);
 	}
