@@ -15,6 +15,8 @@ public class Client
 	private List<Facture> factures = new ArrayList<>();
 	private List<Facture> facturesReglees = new ArrayList<>();
 	
+	private int somme=0;
+	
 	public Client(String nom) //////////
 	{
 		this.nom = nom;
@@ -49,7 +51,8 @@ public class Client
 	public Facture createFacture(int montant) ////////////
 	{
 		Facture fac = new Facture(this, montant, false, java.time.LocalDate.now());
-		factures.add(fac);
+		this.factures.add(fac);
+		this.somme += montant;
 		return fac;
 	}
 	
@@ -60,7 +63,7 @@ public class Client
 
 	public List<Facture> getFactures()
 	{	
-		return factures;
+		return this.facturesReglees;
 	}
 	
 	/**
@@ -70,7 +73,7 @@ public class Client
 	
 	public int sommeMontants()
 	{
-		return 0;
+		return this.somme;
 	}
 
 	/**
@@ -83,7 +86,8 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee) /////////
 	{
 		Facture facR = new Facture(this, montant, reglee, java.time.LocalDate.now());
-		facturesReglees.add(facR);
+		this.facturesReglees.add(facR);
+		this.somme += montant;
 		return facR;
 	}	
 	
@@ -94,7 +98,7 @@ public class Client
 
 	public List<Facture> facturesReglees()
 	{
-		return facturesReglees;
+		return this.facturesReglees;
 	}
 	
 
