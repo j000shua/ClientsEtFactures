@@ -86,7 +86,8 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee) /////////
 	{
 		Facture facR = new Facture(this, montant, reglee, java.time.LocalDate.now());
-		this.facturesReglees.add(facR);
+		if(reglee)
+			this.facturesReglees.add(facR);
 		this.somme += montant;
 		return facR;
 	}	
