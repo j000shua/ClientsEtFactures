@@ -9,12 +9,12 @@ public class Client
 	 * Crée un client.
 	 * @param nom le nom du client. 
 	 */
+	private static List<Client> clients = new ArrayList<>();
 	
 	private String nom; //////////
 	
 	private List<Facture> factures = new ArrayList<>();
 	private List<Facture> facturesReglees = new ArrayList<>();
-	private static List<Client> clients = new ArrayList<>();
 	
 	private int somme=0;
 	
