@@ -110,7 +110,7 @@ public class Client
 	 * Retourne tous les clients créés.
 	 * @return une copie de la liste de tous les clients.
 	 */
-	public List<Client> tous()
+	public static List<Client> tous()
 	{
 		return Client.clients;
 	}
