@@ -22,6 +22,7 @@ public class Client
 	{
 		this.nom = nom;
 		Client.clients.add(this);
+		System.out.println(this);
 	}
 
 	/**
@@ -65,7 +66,8 @@ public class Client
 
 	public List<Facture> getFactures()
 	{	
-		return this.factures;
+		List<Facture> list = this.factures;
+		return list;
 	}
 	
 	/**
@@ -112,7 +114,8 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return Client.clients;
+		List<Client> list = Client.clients;
+		return list;
 	}
 	
 	/**

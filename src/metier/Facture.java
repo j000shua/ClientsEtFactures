@@ -38,6 +38,11 @@ public class Facture
 	{
 		return montant;
 	}
+	
+	public String getMessage() 
+	{
+		return "";
+	}
 
 	/**
 	 * Retourne vrai si la facture est reglée.
