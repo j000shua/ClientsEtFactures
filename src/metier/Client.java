@@ -21,7 +21,7 @@ public class Client
 	public Client(String nom) //////////
 	{
 		this.nom = nom;
-		clients.add(this);
+		Client.clients.add(this);
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return clients;
+		return Client.clients;
 	}
 	
 	/**
@@ -121,6 +121,6 @@ public class Client
 	
 	public void delete()
 	{
-		clients.remove(this);
+		Client.clients.remove(this);
 	}
 }
