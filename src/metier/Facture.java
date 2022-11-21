@@ -74,6 +74,16 @@ public class Facture
 	
 	public Facture copie() ////////////
 	{
-		return new Facture(this.client, this.montant, this.estRegle, this.date);
+		Facture f;
+		if(this.estRegle) {
+			f = this.client.createFacture(this.montant, this.estRegle);
+			f.date = this.date;
+			return f;
+		}
+		else {
+			f = this.client.createFacture(this.montant);
+			f.date = this.date;
+			return f;
+		}
 	}
 }
