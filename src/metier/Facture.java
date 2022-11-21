@@ -65,6 +65,7 @@ public class Facture
 	
 	public void delete()
 	{
+		client.getFactures().remove(this);
 	}
 	
 	/**
@@ -75,12 +76,14 @@ public class Facture
 	public Facture copie() ////////////
 	{
 		Facture f;
-		if(this.estRegle) {
+		if(this.estRegle) 
+		{
 			f = this.client.createFacture(this.montant, this.estRegle);
 			f.date = this.date;
 			return f;
 		}
-		else {
+		else 
+		{
 			f = this.client.createFacture(this.montant);
 			f.date = this.date;
 			return f;
