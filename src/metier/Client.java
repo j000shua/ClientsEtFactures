@@ -110,7 +110,7 @@ public class Client
 	 * Retourne tous les clients créés.
 	 * @return une copie de la liste de tous les clients.
 	 */
-	public static List<Client> tous()
+	public List<Client> tous()
 	{
 		return Client.clients;
 	}
@@ -121,6 +121,6 @@ public class Client
 	
 	public void delete()
 	{
-		Client.clients.remove(this);
+		clients.remove(this);
 	}
 }
