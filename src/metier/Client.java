@@ -65,7 +65,8 @@ public class Client
 
 	public List<Facture> getFactures()
 	{	
-		List<Facture> list = this.factures;
+		List<Facture> list = new ArrayList<>();
+		list = this.factures;
 		return list;
 	}
 	
@@ -113,7 +114,8 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		List<Client> list = Client.clients;
+		List<Client> list = new ArrayList<>();
+		list = clients;
 		return list;
 	}
 	
