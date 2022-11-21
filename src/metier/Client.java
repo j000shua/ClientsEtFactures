@@ -14,12 +14,14 @@ public class Client
 	
 	private List<Facture> factures = new ArrayList<>();
 	private List<Facture> facturesReglees = new ArrayList<>();
+	private static List<Client> clients = new ArrayList<>();
 	
 	private int somme=0;
 	
 	public Client(String nom) //////////
 	{
 		this.nom = nom;
+		clients.add(new Client(nom));
 	}
 
 	/**
@@ -110,7 +112,7 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return null;
+		return clients;
 	}
 	
 	/**
@@ -119,5 +121,6 @@ public class Client
 	
 	public void delete()
 	{
+		clients.remove(this);
 	}
 }
