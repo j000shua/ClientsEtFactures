@@ -88,7 +88,7 @@ public class Client
 	public Facture createFacture(int montant, boolean reglee) /////////
 	{
 		Facture facR = new Facture(this, montant, reglee, java.time.LocalDate.now());
-		this.factures.add(facR);
+		//this.factures.add(facR);
 		if(reglee)
 			this.facturesReglees.add(facR);
 		this.somme += montant;
@@ -112,7 +112,7 @@ public class Client
 	 */
 	public static List<Client> tous()
 	{
-		return clients;
+		return null;
 	}
 	
 	/**
