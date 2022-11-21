@@ -22,7 +22,6 @@ public class Client
 	{
 		this.nom = nom;
 		Client.clients.add(this);
-		System.out.println(this);
 	}
 
 	/**
